@@ -6,6 +6,10 @@ module.exports = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
+    securityGroupId: process.env.SECURITY_GROUP_ID,
+    subnet1: process.env.SUBNET1,
+    subnet2: process.env.SUBNET2,
+    subnet3: process.env.SUBNET3,
   },
   test: {
     username: "root",

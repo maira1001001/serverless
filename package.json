@@ -18,12 +18,15 @@
   },
   "homepage": "https://github.com/maira1001001/serverless#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^7.0.0-alpha.2"
+    "sequelize": "^7.0.0-alpha.2",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.3.0"
+    "sequelize-cli": "^6.3.0",
+    "serverless-offline": "^8.3.1"
   }
 }
