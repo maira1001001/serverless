@@ -2,7 +2,7 @@ service: neocomplexx
 frameworkVersion: "2 || 3"
 
 custom:
-  secrets: ${file(secrets.json)}
+  secrets: ${file(config/production.js)}
 
 provider:
   name: aws
@@ -11,11 +11,11 @@ provider:
   stage: ${self:custom.secrets.NODE_ENV}
   environment:
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
-    DB_NAME: ${self:custom.secrets.DB_NAME}
-    DB_USER: ${self:custom.secrets.DB_USER}
-    DB_PASSWORD: ${self:custom.secrets.DB_PASSWORD}
-    DB_HOST: ${self:custom.secrets.DB_HOST}
-    DB_PORT: ${self:custom.secrets.DB_PORT}
+    DB_NAME: ${self:custom.secrets.database}
+    DB_USER: ${self:custom.secrets.username}
+    DB_PASSWORD: ${self:custom.secrets.password}
+    DB_HOST: ${self:custom.secrets.host}
+    DB_PORT: ${self:custom.secrets.port}
   vpc:
     securityGroupIds:
       - ${self:custom.secrets.SECURITY_GROUP_ID}

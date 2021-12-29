@@ -9,9 +9,6 @@ const router = express.Router();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// router.post();
-// router.get();
-
 app.get("/health", (req, res) => {
   sequelize
     .authenticate()
